@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+.btn-icon {
+	padding:  7px 10px 7px 10px;
+	cursor: pointer;
+}
+
+.display_card {
+	margin: 7px 0px 7px 0px;
+}

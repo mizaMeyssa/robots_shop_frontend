@@ -3,18 +3,26 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { RobotManagerComponent } from './robot.manager.component';
+import { ListComponent } from './list.component';
+import { RobotComponent } from './robot.component';
+import { ModalComponent } from './modal.component';
+
+import {RobotService} from './service.robot';
 
 @NgModule({
   declarations: [
-    AppComponent
+    RobotManagerComponent,
+    ListComponent,
+    RobotComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [RobotService],
+  bootstrap: [RobotManagerComponent, ListComponent]
 })
 export class AppModule { }
