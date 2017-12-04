@@ -1,0 +1,39 @@
+<div (click)="onContainerClicked($event)" class="modal fade" tabindex="-1" [ngClass]="{'show': visibleAnimate}"
+       [ngStyle]="{'display': visible ? 'block' : 'none', 'opacity': visibleAnimate ? 1 : 0}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+      {{ editMode? 'Robot Editor' : 'Robot Details'}}
+    </div>
+    <div class="modal-body">
+      <form role="form">
+        <div class="form-group">
+          <label>Label<font *ngIf="editMode" color="red">*</font> : </label>
+          <input *ngIf="editMode" class="form-control" placeholder="Enter a Title" [ngModel]="modal_robot?.label" (ngModelChange)="modal_robot.label = $event"  name="label" >
+          <span *ngIf="!editMode">{{modal_robot?.label}}</span>
+        </div>
+        <div class="form-group">
+          <label>Description<font *ngIf="editMode" color="red">*</font> : </label>
+          <input *ngIf="editMode" class="form-control" placeholder="Enter a Title" [ngModel]="modal_robot?.description" (ngModelChange)="modal_robot.description = $event" name="description">
+          <span *ngIf="!editMode">{{modal_robot?.description}}</span>
+        </div>
+        <div class="form-group">
+          <label>Price<font *ngIf="editMode" color="red">*</font> : </label>
+          <input *ngIf="editMode" class="form-control" placeholder="Enter a Title" [ngModel]="modal_robot?.price" (ngModelChange)="modal_robot.price = $event" name="price">
+          <span *ngIf="!editMode">{{modal_robot?.price}}</span>
+        </div>
+        <div class="form-group">
+          <label>Inventory Quantity<font *ngIf="editMode" color="red">*</font> : </label>
+          <input *ngIf="editMode" class="form-control" placeholder="Select Quantity" [ngModel]="modal_robot?.qty" (ngModelChange)="modal_robot.qty = $event" name="qty">
+          <span *ngIf="!editMode">{{modal_robot?.qty}}</span>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="hide()">Close</button>
+      <button *ngIf="editMode" type="button" class="btn btn-primary" (click)="save()">Save changes</button>
+    </div>
+    </div>
+  </div>
+</div>
+

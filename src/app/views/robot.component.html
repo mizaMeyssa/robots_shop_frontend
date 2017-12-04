@@ -1,0 +1,15 @@
+<div class="card display_card">
+	<h6 class="card-header primary-color white-text">{{robot.label}}</h6>
+	<div class="card-body">
+		<h5 class="card-title">{{robot.price}}$</h5>
+		<p class="card-text" *ngIf="robot.qty === 0">Sold Out</p>
+		<p class="card-text" *ngIf="robot.qty > 0">Available</p>
+		<a class="btn btn-primary btn-icon" title="View Details" (click)="zoomRobot(robot)"><i class="fa fa-search-plus"></i></a>
+		<a class="btn btn-primary btn-icon" title="Add to cart" (click)="buyRobot(robot.id)"><i class="fa fa-shopping-cart"></i></a>
+		<a class="btn btn-primary btn-icon" title="Delete Robot" (click)="deleteRobot(robot.id)"><i class="fa fa-times"></i></a>
+		<a class="btn btn-primary btn-icon" title="Edit Robot" (click)="editRobot(robot)"><i class="fa fa-gears"></i></a>
+		<a class="btn btn-primary btn-icon" title="Clone Robot" (click)="cloneRobot(robot)"><i class="fa fa-copy"></i></a>
+	</div>
+	<modal-window>
+	</modal-window>
+</div>

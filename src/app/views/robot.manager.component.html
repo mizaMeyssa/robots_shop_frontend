@@ -1,0 +1,20 @@
+<div class="container">
+	<h2 class="text-center text-uppercase text-secondary mb-0">Manage Robots</h2>
+	<hr class="star-dark mb-5">
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div  class="col-md-4 col-lg-4">
+					<a class="btn btn-primary" title="Edit" (click)="createRobot(robot)">Create one Robot <i class="fa fa-plus-circle"></i></a>
+				</div>
+				<div  class="col-md-4 col-lg-4">
+					<a class="btn btn-primary" title="Edit" (click)="uploadRobot(robot)">Import in bulk <i class="fa fa-upload"></i></a>
+				</div>
+				<div  class="col-md-4 col-lg-4">
+					<a class="btn btn-primary" title="Edit" (click)="downloadRobot(robot)">Download list <i class="fa fa-download"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<modal-window></modal-window>
+</div>
