@@ -3,5 +3,6 @@ export class Robot {
 	public label : string;
 	public description : string;
 	public price : number ;
+	public qty : number;
 	public sold : boolean;
 }

@@ -12,7 +12,6 @@ import { Subscription } from 'rxjs/Subscription';
 export class RobotComponent {
 
 	@Input() robot : Robot;
-	@Output() refreshList = new EventEmitter<any>();
 	@ViewChild(ModalComponent) modal: ModalComponent;
 
 	subscription : Subscription;
@@ -34,6 +33,9 @@ export class RobotComponent {
 
 	public zoomRobot(robot) {
 		this.modal.show(robot, 'R');
+	}
+
+	public buyRobot(id) {
 	}
 
 	public editRobot(robot) {

@@ -9,6 +9,7 @@ import { RobotComponent } from './robot.component';
 import { ModalComponent } from './modal.component';
 
 import {RobotService} from './service.robot';
+import {FileService} from './service.file';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {RobotService} from './service.robot';
     FormsModule,
     HttpModule
   ],
-  providers: [RobotService],
+  providers: [RobotService, FileService],
   bootstrap: [RobotManagerComponent, ListComponent]
 })
 export class AppModule { }
